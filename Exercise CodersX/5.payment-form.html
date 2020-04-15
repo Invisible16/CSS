@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            font-family: sans-serif;
+            background-color: #f5f9ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #3c3f42;
+            font-size: 14px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        ion-icon {
+            font-size: 1.5rem;
+        }
+
+        .container {
+            background-color: #fff;
+        }
+
+        .wrap {
+            border: 0.5px solid #ddd;
+            display: flex;
+            padding: 0.5rem 1rem;
+        }
+
+        .title>h4 {
+            margin: 0;
+            padding-top: 0.2rem;
+            flex-grow: 1;
+        }
+
+        .payment {
+
+            flex-direction: column;
+        }
+
+        .alert {
+            font-size: 12px;
+            color: #5b5b5c;
+            display: flex;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+        }
+
+        .card>img {
+            height: 2.5rem;
+            border: 0.5px solid #81c7fa;
+            border-radius: 2px;
+            padding: 0 0.8rem;
+            margin-right: 0.5rem;
+        }
+        .card>img:hover{
+            box-shadow: 1px 3px 5px #81c8faa2;
+        }
+        label {
+            margin: 2rem;
+        }
+
+        .space {
+            margin-top: 0.5rem;
+        }
+        .space:last-child {
+            margin: 0.5rem 0;
+        }
+        .payment  p{
+            margin: 1rem 0;
+        }
+        ::placeholder{
+            color:rgb(80, 80, 80) ;
+            opacity: 0.5;
+            padding-left: 0.5rem;
+        }
+        input[type=text]{
+            height: 2rem;
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #81c7fa;
+        }
+        .card-infor{
+            display: flex;
+        }
+        .number{
+            flex: 6 
+        }
+        .date{
+            flex: 2;
+            margin: 0 0.2rem ;
+        }
+        .ccv{
+            flex: 2
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title wrap">
+            <h4>Payment method</h4>
+            <ion-icon name="help-circle-outline"></ion-icon>
+        </div>
+        <div class="payment wrap">
+            <div class="card space">
+                <img src="visa.svg" alt="">
+                <img src="mastercard (1).svg" alt="">
+
+            </div>
+            <div class="card-holder space">
+                <p>Cardholder name</p>
+                <input type="text" pattern="[1-9]">
+            </div>
+            <div class="card-infor space">
+                <div class="number">
+                    <p>Card number</p>
+                    <input type="text" pattern="[1-9]" placeholder="1234 6573 8228 7373">
+                </div>
+                <div class="date">
+                    <p>Date</p>
+                    <input type="text" placeholder="10/25">
+                </div>
+                <div class="ccv">
+                    <p>CCV</p>
+                    <input type="text" pattern="[1-9]" placeholder="329">
+                </div>
+
+            </div>
+            <div class="alert space">
+                <ion-icon style="color:#56a6e1" name="alert-circle"></ion-icon>
+                <p>Credit Card payments may take up to 24h to processed</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>

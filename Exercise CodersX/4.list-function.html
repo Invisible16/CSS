@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        html,
+        body {
+            font-family: sans-serif;
+            background-color: rgb(250, 248, 248);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            background-color: #2a3945;
+            border-radius: 20px;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            padding: 1.5em;
+            color: #eee;
+
+        }
+        ::placeholder{
+            color:#eee ;
+            opacity: 0.5;
+        }
+        .text-input {
+            background-color: #55616a;
+            color: #eee;
+            margin-bottom: 1.2rem;
+            padding: 0.5rem ;
+            height: 2rem;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        ion-icon {
+            color: #eee;
+            font-size: 1.5rem;
+            padding: 0.3rem;
+            border-radius: 5px;
+        }
+
+        .add-icon {
+            background-color: #00c57a;
+            margin-right: 1rem;
+        }
+
+        .ana-icon {
+            background-color: #208fd8;
+            margin-right: 1rem;
+        }
+
+        .chat-icon {
+            background-color: #ebc100;
+            margin-right: 1rem;
+        }
+
+        .cop-icon {
+            background-color: #784ec7;
+            margin-right: 1rem;
+        }
+
+        .function {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <input class="text-input" type="text" name="" id="" placeholder="Type something to search...">
+        <div class="function">
+            <ion-icon class="add-icon" name="add-circle-outline"></ion-icon>
+            <p>Add icon</p>
+        </div>
+        <div class="function">
+            <ion-icon class="ana-icon" name="analytics-outline"></ion-icon>
+            <p>Add comment</p>
+        </div>
+        <div class="function">
+            <ion-icon class="chat-icon" name="chatbubble-outline"></ion-icon>
+            <p>Add dependency</p>
+        </div>
+        <div class="function">
+            <ion-icon class="cop-icon" name="copy-outline"></ion-icon>
+            <p>Add current block</p>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+
+</html>
