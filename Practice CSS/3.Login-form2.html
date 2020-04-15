@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('./image-login-form 2/background.png');
+            background-size: cover;
+            background-position: center center;
+            font-family: Roboto, sans-serif;
+            font-family: 'Yesteryear', cursive;
+            color: rgb(236, 235, 235);
+
+        }
+
+        .wrap {
+            background-color: rgba(216, 216, 216, 0.26);
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.3);
+            text-align: center;
+            text-shadow: 0.2px 0.2px 2px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        .wrap img {
+            height: 50px;
+            width: 50px;
+            /*Cho hình dính với form, và đúng giữa*/
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            border: none;
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            margin: 1.5rem 0;
+            outline: none;
+            background-color: rgba(126, 125, 125, 0.521);
+            border-radius: 5px;
+
+        }
+
+        .wrap button {
+            padding: 0.6rem 2rem;
+            background-color: #FFE53B;
+            background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+            border-radius: 1px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin: 0.5rem 0;
+            box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
+            outline: none;
+
+
+        }
+        .wrap h2{
+            font-weight: 300;
+            font-size: 2.2rem;
+            margin: 1.5rem 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="wrap">
+        <img src="./image-login-form 2/logo.png" alt="logo" srcset="">
+        <h2 class="title">Welcome</h2>
+        <input type="text" name="" id="user">
+        <input type="password" name="" id="password">
+        <button type="submit">Login</button>
+    </form>
+</body>
+
+</html>
