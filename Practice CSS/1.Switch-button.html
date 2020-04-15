@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>switch button</title>
     <style>
         body{
             display: flex;
@@ -18,9 +18,9 @@
             /* appearance: none; làm phần tử bên trong biến mất(reset) */ 
             height: 50px;
             width: 90px;
-            background-color: #bdbdbd;
-            border-radius: 30px;
-            border: 1px solid rgb(163, 163, 163);
+            background-color: #d4d4d4;
+            border-radius: 40px;
+            border: 1px solid rgb(189, 189, 189);
             outline: none;
             cursor: pointer;
             position: relative;
@@ -28,23 +28,24 @@
 
         }
         .switch:checked{
-            background-color: mediumseagreen;
-            border:1px solid mediumseagreen;
+            background-color: rgb(28, 190, 101);
+            border:1px solid rgb(28, 190, 101);
         }
         .switch::before{
             content: '';
-            height: 48px;
-            width: 48px;
+            height: 47px;
+            width: 47px;
             top: 0px;
-            left: 0px;
+            left: 1px;
             background-color: white;
             position: absolute;
             border-radius: 50%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
             transition: 200ms;
         }
         .switch:checked::before{
             left: 40px;
-
+            box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
