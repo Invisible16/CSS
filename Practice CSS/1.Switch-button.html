@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+        .switch{
+            -webkit-appearance: none;
+            /* appearance: none; làm phần tử bên trong biến mất(reset) */ 
+            height: 50px;
+            width: 90px;
+            background-color: #bdbdbd;
+            border-radius: 30px;
+            border: 1px solid rgb(163, 163, 163);
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            transition: 200ms;
+
+        }
+        .switch:checked{
+            background-color: mediumseagreen;
+            border:1px solid mediumseagreen;
+        }
+        .switch::before{
+            content: '';
+            height: 48px;
+            width: 48px;
+            top: 0px;
+            left: 0px;
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+            transition: 200ms;
+        }
+        .switch:checked::before{
+            left: 40px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" name="" class="switch">
+    <input type="checkbox" name="" class="switch" checked>
+
+</body>
+</html>
