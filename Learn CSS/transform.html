@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+        }
+        .item{
+            width:100px;
+            height:100px;
+            background-color: seagreen;
+           
+        }
+        #square{
+            background-color: rgb(47, 0, 255);
+            width:500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+   <div id='square'>
+    <div class='item' id='item'>
+
+    </div>
+</div>
+    <script>
+        let item=document.getElementById('item');
+        let square=document.getElementById('square');
+        let goc=0;
+        let quay;
+        square.addEventListener('mouseover',(e)=>{
+            quay=setInterval(()=>{
+                goc+=5;
+                console.log(e.offsetX,e.offsetY)
+                
+                item.style.transform='rotate('+goc+'deg)';
+                item.style.transform='translate('+e.X+'px,'+e.Y+'px)';
+               
+            },1)
+               
+          
+        })
+        square.addEventListener('mouseout',(e)=>{
+          
+           clearInterval(quay)
+      })
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* Custom properties (--*): CSS variables */
+:root {
+    --first-color: #488cff;
+    --second-color: #ffff8c;
+  }
+  
+  #firstParagraph {
+    background-color: var(--first-color);
+    color: var(--second-color);
+  }
+  
+  #secondParagraph {
+    background-color: var(--second-color);
+    color: var(--first-color);
+  }
+  
+/* LINE HEIGHT All rules below have the same resultant line height */
+
+div { line-height: 1.2;   font-size: 10pt; }   /* number/unitless */ 
+div { line-height: 1.2em; font-size: 10pt; }   /* length */ 
+div { line-height: 120%;  font-size: 10pt; }   /* percentage */
+div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
+
+/* Các thẻ a có href thì có trạng thái link*/
+a:link {
+    background-color: gold;
+    color: green;
+  }
+/*  font-variant */
+font-variant: small-caps;
+font-variant: common-ligatures small-caps;
+font-variant: no-common-ligatures proportional-nums; 
+
+/* Global values */
+font-variant: inherit;
+font-variant: initial;
+font-variant: unset;
+p.fontVariant-1{
+    font-variant: no-common-ligatures proportional-nums;
+}
+p.fontVariant-2{
+    font-variant: common-ligatures small-caps;
+    text-indent: 40px;
+}
+/* Over flow*/
+div.a {
+    white-space: nowrap; 
+    width: 50px; 
+    overflow: hidden;
+    text-overflow: clip; 
+    border: 1px solid #000000;
+  }
+  
+  div.b {
+    white-space: nowrap; 
+    width: 50px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    border: 1px solid #000000;
+  }
+p.normal {
+    font-variant: normal;
+  }
+  p.small {
+    font-variant: small-caps;
+  }
+/* Keyword values */
+text-transform: none;
+text-transform: capitalize;
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: full-width;
+text-transform: full-size-kana;
+
+/* Global values */
+text-transform: inherit;
+text-transform: initial;
+text-transform: unset;
