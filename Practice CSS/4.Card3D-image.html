@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Image</title>
+    <style>
+        /* Dùng grid để chia cột
+            Display : block, inline-block
+            Transform : rotate, skew,translate
+            Position: relative, absolute
+            @media để responsive*/
+        body{
+            font-family: Roboto, sans-serif;
+            display: grid;
+            grid-template-columns:repeat(3,1fr); /*1 dòng 3 cột, mỗi cột 1 phần chia đều*/
+            gap: 1rem 1rem; /*gap hay grid-gap : A shorthand for row-gap and column-gap */
+            color: #333;
+            grid-template-rows: repeat(auto-fill, 400px) /*mỗi dòng 400*/
+        }
+        .wrap{
+            background-color: rgb(240, 240, 240);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 70%; */
+            cursor: pointer;
+            transition: 220ms;
+
+
+        }
+        .wrap:hover{
+            background-color: rgb(214, 214, 214);
+        }
+        .wrap:hover .frame .card{
+            transform: translate(50px,-50px);
+        }
+        .frame{
+            position: relative;
+            display: inline-block; /*Hiển thị vừa đủ tấm ảnh*/
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            transform: rotate(-30deg) skew(20deg) scale(0.48); /*Xoay , nghiêng, thu nhỏ có thể dùng rotate3d(1, 1, 1, -70deg)*/
+            /* transform: rotate3d(1, 1, 1, -70deg) scale(0.48) ; chưa tỉ lệ lắm   */
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .card{
+            padding: 10px 10px 6px 10px;
+            transition: 220ms;
+            background-color: rgba(255, 255, 255, 0.466);
+            border: 1px solid rgba(128, 128, 128, 0.712);
+            border-radius: 5px;
+
+        }
+        
+        .card>img{
+            width: 100%;
+            /* object-fit: cover; */
+        }
+        .card>.title{
+            text-align: center;
+            font-size: 20px;
+        }
+        /* Responsive 992 là kích thước máy tính bảng */
+        @media (max-width: 992px) {
+            .wrap{
+                grid-column: span 3; /*Wrap sẽ chiếm trọn 3 cột*/
+            }
+            .frame{
+            transform: rotate(-30deg) skew(20deg) scale(0.4); /*Cho scale nhỏ hơn khi màn hình nhỏ */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/3.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/3.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/2.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/3.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/3.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/3.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/3.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="frame">
+            <div class="card">
+                <img src="/Practice CSS/image4/3.jpg" alt="" srcset="">
+                <p class="title">Love yourself</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

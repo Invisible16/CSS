@@ -42,7 +42,7 @@ p.fontVariant-2{
     font-variant: common-ligatures small-caps;
     text-indent: 40px;
 }
-/* Over flow*/
+/*Text Over flow*/
 div.a {
     white-space: nowrap; 
     width: 50px; 
@@ -64,6 +64,34 @@ p.normal {
   p.small {
     font-variant: small-caps;
   }
+/* Over flow */
+div.ex1 {
+  background-color: lightblue;
+  width: 110px;
+  height: 110px;
+  overflow: scroll;
+}
+
+div.ex2 {
+  background-color: lightblue;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+}
+
+div.ex3 {
+  background-color: lightblue;
+  width: 110px;
+  height: 110px;
+  overflow: auto;
+}
+
+div.ex4 {
+  background-color: lightblue;
+  width: 110px;
+  height: 110px;
+  overflow: visible;
+}
 /* Keyword values */
 text-transform: none;
 text-transform: capitalize;
