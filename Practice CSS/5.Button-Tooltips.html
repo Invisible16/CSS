@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d72279f407.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: radial-gradient(circle farthest-corner at 50.1% 52.3%, rgba(255, 231, 98, 1) 58.2%, rgba(251, 212, 0, 1) 90.1%);
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .btn-tooltip {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: 220ms all;
+            outline: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            cursor: pointer;
+        }
+        .btn-tooltip:nth-child(2) {
+            border: 2px solid green;
+            color: green;
+        }
+        .btn-tooltip:nth-child(1) {
+            border: 2px solid rgb(240, 53, 21);
+            color: red;
+        }
+        .btn-tooltip:hover{
+            transform: translate(0,-10px);
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);/*di chuyển nhưng bóng đứng yên tại chỗ*/
+        }
+        .btn-tooltip:active{
+            transform: translate(5px,-5px); /*nhảy tưng tưng khi click*/
+        }
+        .btn-tooltip:nth-child(1):hover{
+            color:rgba(255, 231, 98, 1);
+            background-color: rgb(240, 53, 21);
+        }
+        .btn-tooltip:nth-child(2):hover{
+            color:rgba(255, 231, 98, 1);
+            background-color: green;
+        }
+        
+        .btn-tooltip::before{
+            content: attr(data-content);/*lấy nd ở data-content*/
+            position: absolute;
+            top: 0;
+            width: 150%;
+            left: 50%;
+            transform: translateX(-50%);/*cho chữ ở giữa*/
+            padding: 5px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: 0.5s all cubic-bezier(0.68,-0.55,0.25,1.55);/*timing-func,truyền vào trục X,Y,2 khoảng time*/
+
+
+        }
+        .btn-tooltip:nth-child(1)::before{
+            border: 1px solid rgb(240, 53, 21);
+            color: rgb(240, 53, 21);
+        }
+        .btn-tooltip:nth-child(2)::before{
+            border: 1px solid green;
+            color: green;
+        }
+        .btn-tooltip::after{
+            /*cách tạo tam giác*/
+            content: '';
+            position: absolute;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);/*cho chữ ở giữa*/
+            opacity: 0;
+            transition: 0.5s all cubic-bezier(0.68,-0.55,0.25,1.55);/*timing-func,truyền vào trục X,Y,2 khoảng time*/
+        }
+        .btn-tooltip:nth-child(1)::after{
+            border-top: 8px solid rgb(240, 53, 21);
+        }
+        .btn-tooltip:nth-child(2)::after{
+            border-top: 8px solid green;
+        }
+        .btn-tooltip:hover:before, .btn-tooltip:hover:after{
+            opacity: 1;
+        }
+        .btn-tooltip:hover:before{
+            top: -60%;
+        }
+        .btn-tooltip:hover:after{
+            top: -25%;
+        }
+    </style>
+</head>
+
+<body>
+    <button data-content="Remove items!" class="btn-tooltip"><i class="fas fa-trash fa-2x"></i></button>
+    <button data-content='Add to cart!' class="btn-tooltip"><i class="fas fa-shopping-cart fa-2x"></i></button>
+</body>
+
+</html>
